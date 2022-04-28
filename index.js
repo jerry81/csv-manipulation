@@ -2,7 +2,18 @@ var result = ''
 function handleContents(contents) {
     splitlines = contents.split('\r\n')
     console.log('split lines is ', splitlines)
-    result=splitlines.join('\n')
+    let resultarr = []
+    resultarr.push(['key','value'])
+    for (let i = 1; i < splitlines.length; i++) {
+       const cur = splitlines[i]
+       const elementArr = cur.split(',')
+       for (let j = 1; j < elementArr.length; j++) {
+           if (elementArr[j]) {
+             resultarr.push([elementArr[0], elementArr[j]])
+           }
+       }
+       console.log('elementArr is ', elementArr)
+    }
 }
 
 
