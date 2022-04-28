@@ -14,6 +14,8 @@ function handleContents(contents) {
        }
        console.log('elementArr is ', elementArr)
     }
+    console.log('resultarr is ', resultarr)
+    result = resultarr.join('\n')
 }
 
 
