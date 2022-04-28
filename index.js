@@ -1,6 +1,8 @@
+var result = ''
 function handleContents(contents) {
     splitlines = contents.split('\r\n')
     console.log('split lines is ', splitlines)
+    result=splitlines.join('\n')
 }
 
 
@@ -39,5 +41,5 @@ function download(filename, text) {
 
 document.querySelector('#convert').addEventListener('click', function(ev) {
     console.log('will create file ')
-    download('result.csv', 'some,text,bro\nmore,text,bro')
+    download('result.csv', result)
 })
